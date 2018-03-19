@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 10;
+}
+
+.header {
+    background-color: none;
+    padding: 20px;
+    text-align: center;
+}
+h1,a{
+  font-family: 'Times New Roman';
+}
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.column.side a:hover{
+  background-color: #ddd;
+    color: black;
+}
+.column.middle a:hover{
+  background-color: #ddd;
+    color: black;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.column.side {
+    width: 33.33%;
+}
+
+.column.middle {
+    width: 33.33%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+img {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+img:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body background="2.jpg" ">
+
+<div class="header">
+  <h1>Digitalized Health Management System</h1>
+  <div>Login in your domain.</div>
+</div>
+
+<div class="topnav">
+  <a href="homepage.html">Home</a>
+</div>
+
+<div class="row">
+  <div class="column side">
+    <h2>Patients</h2>
+    <a href="patientlogin.html">
+    <img src="pati.jpg" width="300" height="250"> 
+    </a>
+        </div>
+  <div class="column middle">
+      <h2>Doctors</h2>
+      <a href="doctorlogin.html">
+        <img src="dd.jpg" width="300" height="250">
+</a>
+  </div>
+  <div class="column side">
+    <h2>Medicines</h2>
+    <a href="medlogin.html">
+        <img src="med.jpg" width="300" height="250">
+</a>
+  </div>
+</div>
+  
+</body>
+</html>
